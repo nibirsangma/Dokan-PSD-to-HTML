@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+    <title>Dokan</title>
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--MaterialCSS-->
+    <link rel="stylesheet" href="css/material-kit.css">
+
+    <!-- BootstrapCSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+  <body class="app sidebar-mini rtl">
+    <!-- Navbar-->
+    <header class="app-header">
+      <a class="app-header__logo" href="index.html">
+        <img src="img/dokan-logo.png" alt="Dokan">
+      </a>
+      <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"><i class="fas fa-bars fa-lg bar-icon"></i></a>
+      <!-- Navbar Right Menu-->
+      <div class="app-search">
+          <button class="app-search__button"><i class="fa fa-search"></i></button>
+          <input class="app-search__input" type="search" placeholder="Search Product">
+      </div>
+      <ul class="app-nav">
+        <!--Notification Menu-->
+        <li class="dropdown">
+          <a class="app-nav__item" href="#" data-toggle="" aria-label="Show notifications">
+            <i class="fas fa-bell fa-2x notification-bell"></i>
+            <div class="notification-alert"></div>      
+          </a>
+        </li>
+        <!-- User Menu-->
+        <li class="dropdown">
+          <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu">
+            <ul class="avartar">
+              <li><img class="rounded-circle avatar-img" src="img/avatar.jpg" alt="avatar"></li>
+              <li><p class="avatar-text">Nibir Mree</p></li>
+              <li><img class="arrow-icon" src="img/drop-down-arrow.png" alt=""></li>
+            </ul>      
+          </a>
+          <ul class="dropdown-menu settings-menu dropdown-menu-right">
+            <li><a class="dropdown-item" href="#"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <!-- <div class="app-sidebar__overlay" data-toggle="sidebar"></div> -->
+    <aside class="app-sidebar">
+      <ul class="app-menu">
+        <li>
+          <a class="app-menu__item" href="index.html">
+            <i class="app-menu__icon fa fa-dashboard dashboard"></i>
+            <span class="app-menu__label">Dashboard</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a class="app-menu__item" href="#" data-toggle="treeview">
+            <i class="app-menu__icon fas fa-briefcase briefcase"></i>
+            <span class="app-menu__label">Products</span>
+          </a>
+        </li>
+        <li>
+          <a class="app-menu__item active" href="index.html">
+            <i class="app-menu__icon fas fa-cart-arrow-down arrow-down"></i>
+            <span class="app-menu__label">Order</span>
+          </a>
+        </li>
+        <li>
+          <a class="app-menu__item" href="coupons.html">
+            <i class="app-menu__icon fas fa-gift gift"></i>
+            <span class="app-menu__label">Coupon</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a class="app-menu__item" href="#" data-toggle="treeview">
+            <i class="app-menu__icon fas fa-comment comment"></i>
+            <span class="app-menu__label">Reports</span>
+          </a>
+        </li>
+        <li class="treeview">
+            <a class="app-menu__item" href="#" data-toggle="treeview">
+              <i class="app-menu__icon fas fa-money-bill money-bill"></i>
+              <span class="app-menu__label">Withdraw</span>
+            </a>
+          </li>
+          <li class="treeview">
+              <a class="app-menu__item" href="#" data-toggle="treeview">
+                  <i class="app-menu__icon fas fa-shield-alt shield-alt"></i>
+                <span class="app-menu__label">Subscription</span>
+              </a>
+            </li>
+            <li class="treeview">
+                <a class="app-menu__item" href="#" data-toggle="treeview">
+                  <i class="app-menu__icon fas fa-calendar-alt calendar-alt"></i>
+                  <span class="app-menu__label">Booking</span>
+                </a>
+              </li>      
+        <li class="treeview">
+          <a class="app-menu__item" href="#" data-toggle="treeview">
+              <i class="app-menu__icon fas fa-cog cog"></i>
+            <span class="app-menu__label">Settings</span>
+          </a>
+          
+        </li>
+      </ul>
+    </aside>
+
+<!-- Main content -->
+<main class="app-content">
+    <div class="app-title">
+      <div>
+        <h1>Order List</h1>
+      </div>
+      <div class="export">
+        <button type="button" class="btn btn-outline-secondary"><i class="fas fa-external-link-alt exportAll"></i>&nbsp;Export All</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-secondary"><i class="fas fa-external-link-alt exportFill"></i>&nbsp;Export Filtered</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+          <div class="status-date">
+            <div class="status">
+              <button type="button" class="btn btn-outline-secondary btn-sm">All (54)</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">Completed (2)</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">Processing (2)</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">Or-hold (2)</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">Pending (3)</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">Cancelled (3)</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">Refunded (3)</button>
+            </div>
+            <div class="date">
+              <input class="form-control" id="demoDate" type="text" placeholder="Select Date">
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tile">
+          <div class="tile-body table-responsive">
+            <table class="table table-borderless" id="sampleTable">
+              <thead>
+                <tr>
+                  <th class="colspan">Order</th>
+                  <th>Order Total</th>
+                  <th>Status</th>
+                  <th>Customer</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-colum-default">
+                  <th class="colspan"><div class="order-color-one"></div><span>Order 555</span></th>
+                  <td class="order-total">$55.00</td>
+                  <td><span class="badge badge-pill badge-success">Online</span></td>
+                  <td>
+                    <div class="customer">
+                      <img src="img/girl.png" alt="himika">
+                    </div>
+                    <span>Timika</span>
+                  </td>
+                  <td>19 Sep,<br>2018</td>
+                  <td class="dropdown">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <ul class="actions">
+                            <li><a href="#"><i class="fas fa-compact-disc fa-spin"></i>Processing</a></li>
+                            <li><a href="#"><i class="fas fa-check-circle fa-complete"></i>Complete</a></li>
+                            <li><a href="#"><i class="fas fa-eye fa-eye"></i>view</a></li>
+                            <li><a href="#"><i class="fas fa-file-invoice fa-invoice"></i>Invoice</a></li>
+                            <li><a href="#"><i class="fas fa-clipboard-list fa-clipboard"></i>Packing Slip</a></li>
+                          </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-colum-default">
+                  <th class="colspan"><div class="order-color-two"></div><span>Order 555</span></th>
+                  <td class="order-total">$55.00</td>
+                  <td><span class="badge badge-pill badge-warning">On-hold</span></td>
+                  <td>
+                      <div class="customer">
+                        <img src="img/girl.png" alt="himika">
+                      </div>
+                      <span>Timika</span>
+                    </td>
+                    <td>19 Sep,<br>2018</td>
+                    <td class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <ul class="actions">
+                                <li><a href="#"><i class="fas fa-compact-disc fa-spin"></i>Processing</a></li>
+                                <li><a href="#"><i class="fas fa-check-circle fa-complete"></i>Complete</a></li>
+                                <li><a href="#"><i class="fas fa-eye fa-eye"></i>view</a></li>
+                                <li><a href="#"><i class="fas fa-file-invoice fa-invoice"></i>Invoice</a></li>
+                                <li><a href="#"><i class="fas fa-clipboard-list fa-clipboard"></i>Packing Slip</a></li>
+                              </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="table-colum-default">
+                  <th class="colspan"><div class="order-color-three"></div><span>Order 555</span></th>
+                  <td class="order-total">$55.00</td>
+                  <td><span class="badge badge-pill badge-danger">Cancelled</span></td>
+                  <td>
+                      <div class="customer">
+                        <img src="img/girl.png" alt="himika">
+                      </div>
+                      <span>Timika</span>
+                    </td>
+                  <td>19 Sep,<br>2018</td>
+                  <td class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                          <ul class="actions">
+                              <li><a href="#"><i class="fas fa-compact-disc fa-spin"></i>Processing</a></li>
+                              <li><a href="#"><i class="fas fa-check-circle fa-complete"></i>Complete</a></li>
+                              <li><a href="#"><i class="fas fa-eye fa-eye"></i>view</a></li>
+                              <li><a href="#"><i class="fas fa-file-invoice fa-invoice"></i>Invoice</a></li>
+                              <li><a href="#"><i class="fas fa-clipboard-list fa-clipboard"></i>Packing Slip</a></li>
+                            </ul>
+                      </div>
+                  </td>
+                </tr>
+                <tr class="table-colum-default">
+                  <td class="colspan"><div class="order-color-four"></div><span>Order 555</span></td>
+                  <td class="order-total">$55.00</td>
+                  <td><span class="badge badge-pill badge-success">Online</span></td>
+                  <td>
+                      <div class="customer">
+                        <img src="img/girl.png" alt="himika">
+                      </div>
+                      <span>Timika</span>
+                  </td>
+                  <td>19 Sep,<br>2018</td>
+                  <td class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                          <ul class="actions">
+                              <li><a href="#"><i class="fas fa-compact-disc fa-spin"></i>Processing</a></li>
+                              <li><a href="#"><i class="fas fa-check-circle fa-complete"></i>Complete</a></li>
+                              <li><a href="#"><i class="fas fa-eye fa-eye"></i>view</a></li>
+                              <li><a href="#"><i class="fas fa-file-invoice fa-invoice"></i>Invoice</a></li>
+                              <li><a href="#"><i class="fas fa-clipboard-list fa-clipboard"></i>Packing Slip</a></li>
+                            </ul>
+                      </div>
+                  </td>
+                </tr>
+                <tr class="table-colum-default">
+                  <td class="colspan"><div class="order-color-five"></div><span>Order 555</span></td>
+                  <td class="order-total">$55.00</td>
+                  <td><span class="badge badge-pill badge-primary">Completed</span></td>
+                  <td>
+                      <div class="customer">
+                        <img src="img/girl.png" alt="himika">
+                      </div>
+                      <span>Timika</span>
+                    </td>
+                    <td>19 Sep,<br>2018</td>
+                    <td class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <ul class="actions">
+                                <li><a href="#"><i class="fas fa-compact-disc fa-spin"></i>Processing</a></li>
+                                <li><a href="#"><i class="fas fa-check-circle fa-complete"></i>Complete</a></li>
+                                <li><a href="#"><i class="fas fa-eye fa-eye"></i>view</a></li>
+                                <li><a href="#"><i class="fas fa-file-invoice fa-invoice"></i>Invoice</a></li>
+                                <li><a href="#"><i class="fas fa-clipboard-list fa-clipboard"></i>Packing Slip</a></li>
+                              </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="table-colum-default">
+                  <td class="colspan"><div class="order-color-six"></div><span>Order 555</span></td>
+                  <td class="order-total">$55.00</td>
+                  <td><span class="badge badge-pill badge-primary">Completed</span></td>
+                  <td>
+                      <div class="customer">
+                        <img src="img/girl.png" alt="himika">
+                      </div>
+                      <span>Timika</span>
+                    </td>
+                    <td>19 Sep,<br>2018</td>
+                    <td class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <ul class="actions">
+                                <li><a href="#"><i class="fas fa-compact-disc fa-spin"></i>Processing</a></li>
+                                <li><a href="#"><i class="fas fa-check-circle fa-complete"></i>Complete</a></li>
+                                <li><a href="#"><i class="fas fa-eye fa-eye"></i>view</a></li>
+                                <li><a href="#"><i class="fas fa-file-invoice fa-invoice"></i>Invoice</a></li>
+                                <li><a href="#"><i class="fas fa-clipboard-list fa-clipboard"></i>Packing Slip</a></li>
+                              </ul>
+                        </div>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+    <!-- Essential javascripts for application to work-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Date Picker -->
+<script src="js/plugins/bootstrap-datepicker.min.js"></script>
+<script>
+  $('#demoDate').datepicker({
+      	format: "dd/mm/yyyy",
+      	autoclose: true,
+      	todayHighlight: true
+      });
+</script>
+    
+<script src="js/bootstrap-material-design.js"></script>
+
+    <!-- Google analytics script-->
+    <script type="text/javascript">
+      if(document.location.hostname == 'pratikborsadiya.in') {
+      	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      	ga('create', 'UA-72504830-1', 'auto');
+      	ga('send', 'pageview');
+      }
+    </script>
+   
+
+  </body>
+</html>

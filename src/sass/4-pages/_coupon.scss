@@ -1,0 +1,180 @@
+// Componant: Card
+
+.add-newCoupon {
+	.btn {
+		&:hover,
+		&focus {
+			background-color: $create-coupon-hover!important;
+			
+		}
+	}
+}
+
+.coupon {
+	position: relative;
+	background: $body-color;
+	border-radius: 3px;
+	margin-top: 30px;
+	transition: all 0.3s ease-in-out;
+
+	@media print {
+		border: 1px solid #ddd;
+  }
+  @media (max-width: 480px) {
+	margin-top: 0px;
+	font-size: 12px;
+	}
+
+	&.small { padding: 0; }
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.9);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		color: #555;
+		border-radius: 3px;
+
+		.l-text {
+			font-size: 24px;
+			margin-top: 15px;
+		}
+	}
+
+	.tile-title {
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-size: 1.5rem;
+	}
+
+	.tile-title-w-btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+
+		p { margin: 0; }
+
+		.title { margin: 0; }
+
+		.side {
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+
+		.btn-group { flex: 0 0 auto; }
+	}
+
+	.tile-footer {
+		border-top: 1px solid #ddd;
+		padding: 20px 0 0 0;
+		margin-top: 10px;
+	}
+
+	.table-colum-default {
+		border-bottom: 2px solid $body-color;
+    background: $white;
+    
+
+    .colspan {
+			width: 30%;
+		}
+
+    .coupon-bg {
+      display: inline-block;
+			padding: 5px 15px;
+      border-radius: 3px;
+      margin: 7px 0;
+    }
+
+		.code-color-one {
+			background: #4956b821;
+			color: $coupon-code-one;
+    }
+
+		.code-color-two {
+			background: #6c75ff3d;
+			color: $coupon-code-two;
+		}
+
+		.code-color-three {
+			background: #ff2c5e30;
+			color: $coupon-code-three;
+		}
+
+		.code-color-four {
+			background: #27ae6040;
+			color: $coupon-code-four;
+		}
+
+		.code-color-five {
+			background: #ffbd0e36;
+			color: $coupon-code-five;
+		}
+
+		.code-color-six {
+			background: #00c8283b;
+			color: $coupon-code-six;
+		}
+
+		.order-total {
+			color: $green;
+		}
+
+		.status-online {
+			color: $white;
+			background: $online;
+			width: 35%;
+    		border-radius: 10px;
+			text-align: center;
+			width: 100px;
+		}
+
+		.status-on-hold {
+			color: $white;
+			background: $on-hold;
+			width: 35%;
+    		border-radius: 10px;
+			text-align: center;
+			width: 100px;
+		}
+
+		.status-cancelled {
+			color: $white;
+			background: $cancelled;
+			border-radius: 10px;
+			text-align: center;
+			width: 100px;
+		}
+
+		.status-Completed {
+			color: $white;
+			background: $on-hold;
+			width: 35%;
+    		border-radius: 10px;
+			text-align: center;
+    		width: 100px;	
+		}
+
+		.customer {
+			background: $order-one;
+			display: inline-block;
+			margin-right: 10px;
+			padding: 0px 2px;
+			border-radius: 20px;
+
+			img {
+				width: 20px;
+			}
+		}
+
+		
+	}
+}
+

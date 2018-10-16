@@ -1,0 +1,151 @@
+// Componant: Card
+
+.tile {
+	position: relative;
+	background: $body-color;
+	border-radius: 3px;
+	margin-top: 30px;
+	transition: all 0.3s ease-in-out;
+
+	@media print {
+		border: 1px solid #ddd;
+	}
+	@media (max-width: 480px) {
+		margin-top: 0;
+		font-size: 12px;
+	}
+
+	&.small { padding: 0; }
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.9);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		color: #555;
+		border-radius: 3px;
+
+		.l-text {
+			font-size: 24px;
+			margin-top: 15px;
+		}
+	}
+
+	.tile-title {
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-size: 1.5rem;
+	}
+
+	.tile-title-w-btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+
+		p { margin: 0; }
+
+		.title { margin: 0; }
+
+		.side {
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+
+		.btn-group { flex: 0 0 auto; }
+	}
+
+	.tile-footer {
+		border-top: 1px solid #ddd;
+		padding: 20px 0 0 0;
+		margin-top: 10px;
+	}
+
+	.table-colum-default {
+		border-bottom: 2px solid $body-color;
+		background: $white;
+
+		.colspan {
+			width: 30%;
+		}
+
+		.order-color-one {
+			background: $order-one;
+			display: inline-block;
+			padding: 11px;
+			margin-right: 10px;
+			margin-bottom: -5px;
+			border-radius: 3px;
+		}
+
+		.order-color-two {
+			background: $order-two;
+			display: inline-block;
+			padding: 11px;
+			margin-right: 10px;
+			margin-bottom: -5px;
+			border-radius: 3px;
+		}
+
+		.order-color-three {
+			background: $order-three;
+			display: inline-block;
+			padding: 11px;
+			margin-right: 10px;
+			margin-bottom: -5px;
+			border-radius: 3px;
+		}
+
+		.order-color-four {
+			background: $order-four;
+			display: inline-block;
+			padding: 11px;
+			margin-right: 10px;
+			margin-bottom: -5px;
+			border-radius: 3px;
+		}
+
+		.order-color-five {
+			background: $order-five;
+			display: inline-block;
+			padding: 11px;
+			margin-right: 10px;
+			margin-bottom: -5px;
+			border-radius: 3px;
+		}
+
+		.order-color-six {
+			background: $order-six;
+			display: inline-block;
+			padding: 11px;
+			margin-right: 10px;
+			margin-bottom: -5px;
+			border-radius: 3px;
+		}
+
+		.order-total {
+			color: $green;
+		}
+
+		.customer {
+			background: $order-one;
+			display: inline-block;
+			margin-right: 10px;
+			padding: 0px 2px;
+			border-radius: 20px;
+
+			img {
+				width: 20px;
+			}
+		}
+
+		
+	}
+}
+

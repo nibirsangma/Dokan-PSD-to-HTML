@@ -1,0 +1,97 @@
+//
+// Application Variables
+//-----------------------------------------------------
+// Primary font
+$body-font: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$body-color: #f5f5f5;
+
+$white: #FFF;
+
+//Font color
+$font-color: #000000;
+
+
+$order-one:#4956b8;
+$order-two:#7c86c9;
+$order-three:#b29ee6;
+$order-four:#f5b1f5;
+$order-five:#f6a100;
+$order-six:#fadd8d;
+
+$violet: violet;
+
+$dark-violet: darkviolet;
+
+$invoice: #ff2c5e;
+
+
+$green: #00c828;
+
+// STATUS COLOR
+$online:#00c828;
+$on-hold:#ffbd0e;
+$cancelled:#ff2c5e;
+$completed:#008afb;
+
+// Primary color is the main color of the application which is used 
+// for navbar, active links and primary button.
+
+// ------ Primary Colors from google material design color palette ------
+// Blue  : #2196F3
+// Teal  : #009688
+// Green : #4CAF50
+// Brown : #795548
+// Purple: #673AB7
+
+$primary-color: #f5f5f5;
+
+$body-color:#f5f5f5;
+
+// Complementry color is used to indecate the loading bar on the top
+// of the page with pace.js plugin
+$complementry-color: adjust_hue($primary-color, 180);
+
+// ------- Sidebar Width --------
+$sidebar-width: 230px;
+
+// ------- Sidebar Colors --------
+
+// Background color of sidebar
+$sidebar-color: #242424;
+
+$sidebar-hover-color: #3a3a3a;
+
+$sidebar-font-color: #929293;
+
+$notification-bell-color: #baced8;
+
+$notification-alert-color: #ff7c89;
+
+
+// Coupon Code Color
+$coupon-code-one:#4956b8;
+$coupon-code-two:#6c75ff;
+$coupon-code-three:#ff2c5e;
+$coupon-code-four:#27ae60;
+$coupon-code-five:#ffbd0e;
+$coupon-code-six:#00c828;
+
+$create-coupon-hover: #f33527;
+
+$grey-color:#d0d0d2;
+
+
+// Sidebar Menu Icon color code 
+
+$dashboard: #f1c40f;
+$briefcase: #e74c3c;
+$arrow-down: #2ecc71;
+$gift: #ffffff;
+$comment: #9b59b6;
+$money-bill: #008afb;
+$shield-alt: #95a5a6;
+$calendar-alt: #16a085;
+$cog:#95a5a6;
+
+
